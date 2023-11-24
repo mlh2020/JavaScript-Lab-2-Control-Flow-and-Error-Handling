@@ -51,6 +51,7 @@ if (endPlantCount > pruneTime) {
 //newArea = PI * radius * radius;
 //newArea / PI = radius * radius;
 //Math.sqrt(newArea / PI) = radius;
+
 let newPlantCount = 100;
 let newNumOfWeeks = 10;
 let newEndPlantCount = newPlantCount * Math.pow(2, newNumOfWeeks);
@@ -67,5 +68,12 @@ console.log(Math.floor(addSpaceReq));
  * 
  */
 
+try {
+    if (endPlantCount > pruneTime) {
+        throw "Nope";
+    }
+} catch (error) {
+    console.log(error);
+}
 
-
+//Feel free to correct me if I'm wrong!
